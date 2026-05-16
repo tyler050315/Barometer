@@ -9,6 +9,7 @@ struct ContentView: View {
                 VStack(alignment: .leading, spacing: 18) {
                     pressureSection
                     altitudeSection
+                    lockSection
                     locationSection
                     airportSection
                     statusSection
@@ -57,6 +58,34 @@ struct ContentView: View {
             Text("参考机场")
                 .font(.headline)
 
+            Picker("机场选择", selection: $viewModel.referenceMode) {
+                ForEach(DashboardViewModel.ReferenceMode.allCases) { mode in
+                    Text(mode.rawValue).tag(mode)
+                }
+            }
+            .pickerStyle(.segmented)
+
+            if viewModel.referenceMode == .manual {
+                HStack(spacing: 10) {
+                    TextField("ICAO，例如 ZGSZ", text: $viewModel.manualICAO)
+                        .textInputAutocapitalization(.characters)
+                        .autocorrectionDisabled()
+                        .font(.system(.body, design: .monospaced))
+                        .textFieldStyle(.roundedBorder)
+                        .onSubmit {
+                            Task { await viewModel.refresh() }
+                        }
+
+                    Button {
+                        Task { await viewModel.refresh() }
+                    } label: {
+                        Image(systemName: "paperplane.fill")
+                    }
+                    .disabled(viewModel.isRefreshing)
+                    .accessibilityLabel("Use manual ICAO")
+                }
+            }
+
             if let airport = viewModel.referenceAirport {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("\(airport.icaoId) / \(airport.name)")
@@ -78,6 +107,51 @@ struct ContentView: View {
             } else {
                 Text("等待机场气压数据")
                     .foregroundStyle(.secondary)
+            }
+        }
+    }
+
+    private var lockSection: some View {
+        panel {
+            HStack {
+                Text("锁定当前位置")
+                    .font(.headline)
+                Spacer()
+                Button {
+                    viewModel.lockCurrentPosition()
+                } label: {
+                    Image(systemName: "lock.fill")
+                }
+                .accessibilityLabel("Lock current position")
+
+                Button {
+                    viewModel.clearLock()
+                } label: {
+                    Image(systemName: "lock.open.fill")
+                }
+                .accessibilityLabel("Clear lock")
+            }
+
+            Text(viewModel.lockText)
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+
+            HStack(spacing: 16) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("相对高度")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(viewModel.relativeAltitudeText)
+                        .font(.title3.weight(.semibold))
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("气压变化")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(viewModel.pressureTrendText)
+                        .font(.title3.weight(.semibold))
+                }
             }
         }
     }
