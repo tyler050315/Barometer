@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A0000012BF9000000000001 /* BarometerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000112BF9000000000001 /* BarometerApp.swift */; };
+		8A0000022BF9000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000122BF9000000000001 /* ContentView.swift */; };
+		8A0000032BF9000000000001 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000132BF9000000000001 /* DashboardViewModel.swift */; };
+		8A0000042BF9000000000001 /* BarometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000142BF9000000000001 /* BarometerReading.swift */; };
+		8A0000052BF9000000000001 /* AirportStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000152BF9000000000001 /* AirportStation.swift */; };
+		8A0000062BF9000000000001 /* MetarReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000162BF9000000000001 /* MetarReport.swift */; };
+		8A0000072BF9000000000001 /* AltitudeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000172BF9000000000001 /* AltitudeResult.swift */; };
+		8A0000082BF9000000000001 /* AltimeterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000182BF9000000000001 /* AltimeterService.swift */; };
+		8A0000092BF9000000000001 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000192BF9000000000001 /* LocationService.swift */; };
+		8A00000A2BF9000000000001 /* AviationWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00001A2BF9000000000001 /* AviationWeatherService.swift */; };
+		8A00000B2BF9000000000001 /* AirportResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00001B2BF9000000000001 /* AirportResolver.swift */; };
+		8A00000C2BF9000000000001 /* AltitudeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00001C2BF9000000000001 /* AltitudeCalculator.swift */; };
+		8A00000D2BF9000000000001 /* UnitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A00001D2BF9000000000001 /* UnitFormatter.swift */; };
+		8A00000E2BF9000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A00001E2BF9000000000001 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A0000102BF9000000000001 /* Barometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0000112BF9000000000001 /* BarometerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerApp.swift; sourceTree = "<group>"; };
+		8A0000122BF9000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8A0000132BF9000000000001 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		8A0000142BF9000000000001 /* BarometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometerReading.swift; sourceTree = "<group>"; };
+		8A0000152BF9000000000001 /* AirportStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportStation.swift; sourceTree = "<group>"; };
+		8A0000162BF9000000000001 /* MetarReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetarReport.swift; sourceTree = "<group>"; };
+		8A0000172BF9000000000001 /* AltitudeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeResult.swift; sourceTree = "<group>"; };
+		8A0000182BF9000000000001 /* AltimeterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltimeterService.swift; sourceTree = "<group>"; };
+		8A0000192BF9000000000001 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		8A00001A2BF9000000000001 /* AviationWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviationWeatherService.swift; sourceTree = "<group>"; };
+		8A00001B2BF9000000000001 /* AirportResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportResolver.swift; sourceTree = "<group>"; };
+		8A00001C2BF9000000000001 /* AltitudeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeCalculator.swift; sourceTree = "<group>"; };
+		8A00001D2BF9000000000001 /* UnitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitFormatter.swift; sourceTree = "<group>"; };
+		8A00001E2BF9000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A00001F2BF9000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A0000202BF9000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A0000212BF9000000000001 = {
+			isa = PBXGroup;
+			children = (
+				8A0000222BF9000000000001 /* Barometer */,
+				8A0000232BF9000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A0000222BF9000000000001 /* Barometer */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000112BF9000000000001 /* BarometerApp.swift */,
+				8A0000122BF9000000000001 /* ContentView.swift */,
+				8A0000132BF9000000000001 /* DashboardViewModel.swift */,
+				8A0000242BF9000000000001 /* Models */,
+				8A0000252BF9000000000001 /* Services */,
+				8A0000262BF9000000000001 /* Utilities */,
+				8A00001E2BF9000000000001 /* Assets.xcassets */,
+				8A00001F2BF9000000000001 /* Info.plist */,
+			);
+			path = Barometer;
+			sourceTree = "<group>";
+		};
+		8A0000232BF9000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000102BF9000000000001 /* Barometer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A0000242BF9000000000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000142BF9000000000001 /* BarometerReading.swift */,
+				8A0000152BF9000000000001 /* AirportStation.swift */,
+				8A0000162BF9000000000001 /* MetarReport.swift */,
+				8A0000172BF9000000000001 /* AltitudeResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A0000252BF9000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000182BF9000000000001 /* AltimeterService.swift */,
+				8A0000192BF9000000000001 /* LocationService.swift */,
+				8A00001A2BF9000000000001 /* AviationWeatherService.swift */,
+				8A00001B2BF9000000000001 /* AirportResolver.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8A0000262BF9000000000001 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8A00001C2BF9000000000001 /* AltitudeCalculator.swift */,
+				8A00001D2BF9000000000001 /* UnitFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A0000272BF9000000000001 /* Barometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A0000282BF9000000000001 /* Build configuration list for PBXNativeTarget "Barometer" */;
+			buildPhases = (
+				8A0000292BF9000000000001 /* Sources */,
+				8A0000202BF9000000000001 /* Frameworks */,
+				8A00002A2BF9000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Barometer;
+			productName = Barometer;
+			productReference = 8A0000102BF9000000000001 /* Barometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A00002B2BF9000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					8A0000272BF9000000000001 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 8A00002C2BF9000000000001 /* Build configuration list for PBXProject "Barometer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A0000212BF9000000000001;
+			productRefGroup = 8A0000232BF9000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A0000272BF9000000000001 /* Barometer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A00002A2BF9000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A00000E2BF9000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A0000292BF9000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0000012BF9000000000001 /* BarometerApp.swift in Sources */,
+				8A0000022BF9000000000001 /* ContentView.swift in Sources */,
+				8A0000032BF9000000000001 /* DashboardViewModel.swift in Sources */,
+				8A0000042BF9000000000001 /* BarometerReading.swift in Sources */,
+				8A0000052BF9000000000001 /* AirportStation.swift in Sources */,
+				8A0000062BF9000000000001 /* MetarReport.swift in Sources */,
+				8A0000072BF9000000000001 /* AltitudeResult.swift in Sources */,
+				8A0000082BF9000000000001 /* AltimeterService.swift in Sources */,
+				8A0000092BF9000000000001 /* LocationService.swift in Sources */,
+				8A00000A2BF9000000000001 /* AviationWeatherService.swift in Sources */,
+				8A00000B2BF9000000000001 /* AirportResolver.swift in Sources */,
+				8A00000C2BF9000000000001 /* AltitudeCalculator.swift in Sources */,
+				8A00000D2BF9000000000001 /* UnitFormatter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A00002D2BF9000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A00002E2BF9000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A00002F2BF9000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Barometer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Barometer;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.barometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8A0000302BF9000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Barometer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Barometer;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.barometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A00002C2BF9000000000001 /* Build configuration list for PBXProject "Barometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A00002D2BF9000000000001 /* Debug */,
+				8A00002E2BF9000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A0000282BF9000000000001 /* Build configuration list for PBXNativeTarget "Barometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A00002F2BF9000000000001 /* Debug */,
+				8A0000302BF9000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A00002B2BF9000000000001 /* Project object */;
+}

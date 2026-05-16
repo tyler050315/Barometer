@@ -1,0 +1,36 @@
+workflows:
+  ios-unsigned:
+    name: iOS unsigned IPA
+    max_build_duration: 30
+    environment:
+      xcode: latest
+      vars:
+        XCODE_PROJECT: "Barometer.xcodeproj"
+        XCODE_SCHEME: "Barometer"
+    scripts:
+      - name: Build unsigned app
+        script: |
+          xcodebuild build \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+      - name: Package unsigned IPA for Sideloadly
+        script: |
+          APP_PATH="$(find build/DerivedData/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' | head -n 1)"
+          if [ -z "$APP_PATH" ]; then
+            echo "No .app found"
+            exit 1
+          fi
+          rm -rf build/ipa
+          mkdir -p build/ipa/Payload
+          cp -R "$APP_PATH" build/ipa/Payload/
+          cd build/ipa
+          zip -qry ../Barometer-unsigned.ipa Payload
+    artifacts:
+      - build/Barometer-unsigned.ipa
+      - build/DerivedData/Build/Products/Release-iphoneos/*.app
