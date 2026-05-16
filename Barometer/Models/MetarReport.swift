@@ -104,15 +104,13 @@ private extension KeyedDecodingContainer where K == MetarReport.CodingKeys {
         fallbackFormatter.formatOptions = [.withInternetDateTime]
 
         for key in keys {
-            if let value = try? decodeIfPresent(String.self, forKey: key),
-               let value {
+            if let value = try? decodeIfPresent(String.self, forKey: key) {
                 if let date = formatter.date(from: value) ?? fallbackFormatter.date(from: value) {
                     return date
                 }
             }
 
-            if let value = try? decodeIfPresent(Double.self, forKey: key),
-               let value {
+            if let value = try? decodeIfPresent(Double.self, forKey: key) {
                 return Date(timeIntervalSince1970: value)
             }
         }
